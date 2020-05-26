@@ -1,0 +1,34 @@
+{% load static %}
+<html>
+<!DOCTYPE html>
+<html lang="ru-ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="{% static 'images/bgu.jpg' %}">
+	<title>Башкирский терминологический словарь</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1><a href="/">Башҡорт телендәге терминдар</a></h1>
+		</div>
+
+	</div>
+	<div class="search-box">
+		<form  action="{% url 'search_results' %}" method="get">
+			<input class="search-txt" name="q" type="search" placeholder="Эҙләргә">
+			<button type="submit">
+				<i class="fa fa-search"></i>
+			</button>
+		</form>
+	</div>
+	<div class="footer">Йомағужин Айҙар
+		<!-- <img src="../static/images/bgu.jpg" alt="BGU" class="logo"> -->
+	</div>
+	<!-- <div class="logo-holder"> -->
+		<!-- <img src="../static/images/bgu.jpg" alt="BGU" class="logo"> -->
+	<!-- </div> -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+<!DOCTYPE html>
+<html lang="ru-ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="{% static 'images/bgu.jpg' %}">
+	<title>Башкирский терминологический словарь</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<div class="page-header">
+			<h1>Терминдар</h1>
+		</div>
+
+
+<table border="1" width="100%" cellpadding="5">
+  
+    <tr>
+    	<th>Русса</th>
+    	<th>Башҡортса</th>
+    	<th>Аңлатма</th>
+    </tr>
+    {% for term in object_list %}
+    <tr>	
+      <td id="first">{{ term.name }}</td>
+       <td>{{ term.bash }}</td>
+       <td>{{ term.mean }}</td>
+    </tr>
+  {% endfor %}
+</table>
