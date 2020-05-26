@@ -5,7 +5,7 @@ from .models import Term
 
 
 class HomePageView(TemplateView):
-    template_name = 'home.html'
+    template_name = 'index.html'
 
 class SearchResultsView(ListView):
     model = Term
